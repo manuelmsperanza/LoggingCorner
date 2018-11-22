@@ -1,5 +1,8 @@
 package me.hoffnungland.logging.corner.log4j;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
