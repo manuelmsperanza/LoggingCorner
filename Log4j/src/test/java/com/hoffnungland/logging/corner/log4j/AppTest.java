@@ -1,4 +1,4 @@
-package me.hoffnungland.logging.corner.log4j;
+package com.hoffnungland.logging.corner.log4j;
 
 import static org.junit.Assert.assertTrue;
 
