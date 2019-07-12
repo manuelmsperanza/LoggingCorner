@@ -1,4 +1,4 @@
-package me.hoffnungland.logging.corner.log4j;
+package com.hoffnungland.logging.corner.log4j;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
