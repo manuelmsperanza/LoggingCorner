@@ -1,5 +1,5 @@
 #Create a new project
-mvn archetype:generate -Dfilter=org.apache.maven.archetypes:maven-archetype-quickstart -DgroupId=com.hoffnungland -DartifactId=Log4j -Dpackage=com.hoffnungland.logging.corner.log4j -Dversion=1.0.1-SNAPSHOT
+mvn archetype:generate -Dfilter="org.apache.maven.archetypes:maven-archetype-quickstart" -DgroupId="com.hoffnungland" -DartifactId=Log4j -Dpackage="com.hoffnungland.logging.corner.log4j" -Dversion="1.0.1-SNAPSHOT"
 #Build settings
 
 
