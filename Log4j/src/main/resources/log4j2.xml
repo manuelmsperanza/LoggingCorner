@@ -23,7 +23,7 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<Logger name="com.hoffnungland.logging.corner.log4j.App" level="${activeLevel}" additivity="false">
+		<Logger name="com.hoffnungland" level="${activeLevel}" additivity="false">
 			<AppenderRef ref="${activeProfile}" />
 		</Logger>
 		<Root level="error">
