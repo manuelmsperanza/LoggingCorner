@@ -120,7 +120,6 @@
 		              		<goal>verify</goal>
 		            	</goals>
 		            	<configuration>
-		            		<verbose>true</verbose>
 		            		<certs>true</certs>
 		            	</configuration>
 		          	</execution>
