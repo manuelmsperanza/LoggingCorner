@@ -5,11 +5,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.hoffnungland</groupId>
-	<artifactId>LoggingCorner</artifactId>
+	<artifactId>loggingcorner</artifactId>
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
 	<name>LoggingCorner</name>
 	<url>http://maven.apache.org</url>
+	<distributionManagement>
+	   <repository>
+	     <id>github</id>
+	     <name>GitHub manuelmsperanza Apache Maven Packages</name>
+	     <url>https://maven.pkg.github.com/manuelmsperanza/loggingcorner</url>
+	   </repository>
+	</distributionManagement>
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/LoggingCorner.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/LoggingCorner.git</developerConnection>
@@ -17,7 +24,7 @@
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/manuelmsperanza/POICorner/issues</url>
+		<url>https://github.com/manuelmsperanza/LoggingCorner/issues</url>
 	</issueManagement>
 	<prerequisites>
 		<maven>3.1.0</maven>
@@ -26,6 +33,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.source.version>1.8</java.source.version>
 		<java.target.version>1.8</java.target.version>
+		<github.global.server>github</github.global.server>
 	</properties>
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
