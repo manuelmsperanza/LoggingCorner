@@ -98,5 +98,3 @@ Update to java 1.8<br>
 The Action run during the release phase of package (or you can run it manually).
 Leave only the latest package version into the repository.
 Create the .github/workflows/cleanupPackages.yml file.
-
-> Remember to add every new package into the step section (either the root pom package)

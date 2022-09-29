@@ -10,7 +10,6 @@ on:
   registry_package:
     types: [published]
 
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -23,14 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Delete Package Versions com.hoffnungland.loggingcorner
+      #- env:
+          #EVENT_CONTEXT: ${{ toJSON(github.event) }}
+        #run: |
+          #echo $EVENT_CONTEXT
+
+      - name: Delete Package Versions ${{ github.event.registry_package.name }}
         uses: actions/delete-package-versions@v3
         with:
-          package-name: 'com.hoffnungland.loggingcorner'
-          min-versions-to-keep: 1
-          
-      - name: Delete Package Versions com.hoffnungland.log4j
-        uses: actions/delete-package-versions@v3
-        with:
-          package-name: 'com.hoffnungland.log4j'
+          package-name: ${{ github.event.registry_package.name }}
           min-versions-to-keep: 1
