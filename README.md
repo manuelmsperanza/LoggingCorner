@@ -1,7 +1,7 @@
 # LoggingCorner
 
-#Build settings
-##Add prerequisites
+# Build settings
+## Add prerequisites
 
 	<prerequisites>
 		<maven>3.1.0</maven>
@@ -15,7 +15,7 @@ Update to java 1.8<br>
 		<java.target.version>1.8</java.target.version>
 	</properties>
 
-##Configure the plugins
+## Configure the plugins
 	
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
@@ -87,3 +87,16 @@ Update to java 1.8<br>
 			</plugin>
 		</plugins>
 	</build>
+
+# add .gitignore to mandatory empty directory
+	# Ignore everything in this directory
+	*
+	# Except this file
+	!.gitignore
+
+# Configure the Package Clean UP Automation with GitHub Action
+The Action run during the release phase of package (or you can run it manually).
+Leave only the latest package version into the repository.
+Create the .github/workflows/cleanupPackages.yml file.
+
+> Remember to add every new package into the step section (either the root pom package)
