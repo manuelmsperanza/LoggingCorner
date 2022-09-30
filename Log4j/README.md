@@ -1,14 +1,15 @@
-#Create a new project
-mvn archetype:generate -Dfilter="org.apache.maven.archetypes:maven-archetype-quickstart" -DgroupId="com.hoffnungland" -DartifactId=Log4j -Dpackage="com.hoffnungland.logging.corner.log4j" -Dversion="1.0.1-SNAPSHOT"
-#Build settings
+# Create a new project
 
+	mvn archetype:generate -Dfilter="org.apache.maven.archetypes:maven-archetype-quickstart" -DgroupId="com.hoffnungland" -DartifactId=Log4j -Dpackage="com.hoffnungland.logging.corner.log4j" -Dversion="1.0.1-SNAPSHOT"
 
+# Build settings
 
-#Relationship
-##Add the dependencies
-###Instruction to encrypt the password on maven settings.xml
+# Relationship
+## Add the dependencies
+### Instruction to encrypt the password on maven settings.xml
 [Encryption guide](http://maven.apache.org/guides/mini/guide-encryption.html)<br>
-Add log4j
+
+### Add log4j
 
 
 		<dependencyManagement>
@@ -54,7 +55,8 @@ Add log4j
 		</dependency>
 	</dependencies>
 
-#add .gitignore to mandatory empty directory
+# add .gitignore to mandatory empty directory
+
 	# Ignore everything in this directory
 	*
 	# Except this file
