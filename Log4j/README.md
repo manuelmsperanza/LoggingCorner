@@ -11,7 +11,6 @@
 
 ### Add log4j
 
-
 		<dependencyManagement>
 		<dependencies>
 			<dependency>
