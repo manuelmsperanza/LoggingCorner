@@ -4,11 +4,11 @@
 	<parent>
 		<artifactId>LoggingCorner</artifactId>
 		<groupId>com.hoffnungland</groupId>
-		<version>0.0.20</version>
+		<version>0.0.21-SNAPSHOT</version>
 	</parent>
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>Log4j</artifactId>
-	<version>1.0.28</version>
+	<version>1.0.29-SNAPSHOT</version>
 	<name>Log4j</name>
 	<dependencyManagement>
 		<dependencies>
