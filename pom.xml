@@ -24,7 +24,7 @@
 		<url>https://github.com/manuelmsperanza/LoggingCorner/issues</url>
 	</issueManagement>
 	<prerequisites>
-		<maven>3.1.0</maven>
+		<maven>3.1.1</maven>
 	</prerequisites>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -54,6 +54,16 @@
       					<releaseProfiles>release</releaseProfiles>
     				</configuration>
   				</plugin>
+  				<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-enforcer-plugin</artifactId>
+    				<version>3.2.1</version>
+  				</plugin>
+  				<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-jarsigner-plugin</artifactId>
+    				<version>3.0.0</version>
+  				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -69,7 +79,7 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>3.1.0</version>
+									<version>3.2.5</version>
 								</requireMavenVersion>
 								<requireJavaVersion>
 									<version>1.8.0</version>
