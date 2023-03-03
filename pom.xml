@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>loggingcorner</artifactId>
-	<version>0.0.23</version>
+	<version>0.0.23-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>LoggingCorner</name>
 	<url>http://maven.apache.org</url>
@@ -46,6 +46,14 @@
 						<target>${java.target.version}</target>
 					</configuration>
 				</plugin>
+				<plugin>
+    				<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-release-plugin</artifactId>
+    				<version>3.0.0-M7</version>
+    				<configuration>
+      					<releaseProfiles>release</releaseProfiles>
+    				</configuration>
+  				</plugin>
 			</plugins>
 		</pluginManagement>
 		<plugins>
