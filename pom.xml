@@ -17,7 +17,6 @@
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/LoggingCorner.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/LoggingCorner.git</developerConnection>
-		<tag>loggingcorner-0.0.37</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
