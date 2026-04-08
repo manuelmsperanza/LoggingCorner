@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hoffnungland</groupId>
 	<artifactId>loggingcorner</artifactId>
-	<version>0.0.39-SNAPSHOT</version>
+	<version>0.0.39</version>
 	<packaging>pom</packaging>
 	<name>LoggingCorner</name>
 	<url>http://maven.apache.org</url>
@@ -17,7 +17,8 @@
 	<scm>
 		<connection>scm:git:https://github.com/manuelmsperanza/LoggingCorner.git</connection>
 		<developerConnection>scm:git:git@github.com:manuelmsperanza/LoggingCorner.git</developerConnection>
-	</scm>
+	  <tag>loggingcorner-0.0.39</tag>
+  </scm>
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/manuelmsperanza/LoggingCorner/issues</url>
