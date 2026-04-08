@@ -1,29 +1,28 @@
 package com.hoffnungland.logging.corner.log4j;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-import org.junit.After;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.TemporaryFolder;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
 /**
  * Test class for verifying rolling file logging from the App class.
  */
-public class AppRollingFileLoggingTest {
+class AppRollingFileLoggingTest {
 
-	@Rule
-	public final TemporaryFolder temporaryFolder = new TemporaryFolder();
+	@TempDir
+	Path temporaryFolder;
 
 	/**
 	 * Resets Log4j configuration after each test.
 	 */
-	@After
-	public void resetLogging() {
+	@AfterEach
+	void resetLogging() {
 		Log4jTestSupport.clear();
 	}
 
@@ -33,18 +32,18 @@ public class AppRollingFileLoggingTest {
 	 * @throws Exception if an error occurs during test execution
 	 */
 	@Test
-	public void mainLogsHelloWorldToRollingFile() throws Exception {
-		Path logDirectory = temporaryFolder.getRoot().toPath();
+	void mainLogsHelloWorldToRollingFile() throws Exception {
+		Path logDirectory = temporaryFolder;
 		Path logFile = logDirectory.resolve("file-test.log");
 
 		Log4jTestSupport.configure("rollingFile", logDirectory, "file-test");
 
 		App.main(new String[0]);
 
-		assertTrue("Expected the rolling log file to be created", Files.exists(logFile));
+		assertTrue(Files.exists(logFile), "Expected the rolling log file to be created");
 
 		String output = Files.readString(logFile, StandardCharsets.UTF_8);
-		assertTrue("Expected the INFO log line in the rolling file", output.contains("Hello World!"));
-		assertTrue("Expected the logger metadata in the rolling file", output.contains("INFO"));
+		assertTrue(output.contains("Hello World!"), "Expected the INFO log line in the rolling file");
+		assertTrue(output.contains("INFO"), "Expected the logger metadata in the rolling file");
 	}
 }
