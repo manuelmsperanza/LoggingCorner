@@ -11,16 +11,27 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+/**
+ * Test class for verifying console logging output from the App class.
+ */
 public class AppConsoleLoggingTest {
 
 	@Rule
 	public final TemporaryFolder temporaryFolder = new TemporaryFolder();
 
+	/**
+	 * Resets Log4j configuration after each test.
+	 */
 	@After
 	public void resetLogging() {
 		Log4jTestSupport.clear();
 	}
 
+	/**
+	 * Tests that the App.main method logs "Hello World!" to console output.
+	 *
+	 * @throws Exception if an error occurs during test execution
+	 */
 	@Test
 	public void mainLogsHelloWorldToConsole() throws Exception {
 		ByteArrayOutputStream capturedOutput = new ByteArrayOutputStream();

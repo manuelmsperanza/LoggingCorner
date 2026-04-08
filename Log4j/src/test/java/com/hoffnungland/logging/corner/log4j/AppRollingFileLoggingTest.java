@@ -11,16 +11,27 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
+/**
+ * Test class for verifying rolling file logging from the App class.
+ */
 public class AppRollingFileLoggingTest {
 
 	@Rule
 	public final TemporaryFolder temporaryFolder = new TemporaryFolder();
 
+	/**
+	 * Resets Log4j configuration after each test.
+	 */
 	@After
 	public void resetLogging() {
 		Log4jTestSupport.clear();
 	}
 
+	/**
+	 * Tests that the App.main method logs "Hello World!" to a rolling log file.
+	 *
+	 * @throws Exception if an error occurs during test execution
+	 */
 	@Test
 	public void mainLogsHelloWorldToRollingFile() throws Exception {
 		Path logDirectory = temporaryFolder.getRoot().toPath();
