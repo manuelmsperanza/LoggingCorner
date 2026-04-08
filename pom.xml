@@ -50,7 +50,7 @@
 				<plugin>
     				<groupId>org.apache.maven.plugins</groupId>
     				<artifactId>maven-release-plugin</artifactId>
-    				<version>3.0.0-M7</version>
+    				<version>3.0.1</version>
     				<configuration>
       					<releaseProfiles>github</releaseProfiles>
     				</configuration>
@@ -135,4 +135,18 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>github</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-deploy-plugin</artifactId>
+						<version>3.1.1</version>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
